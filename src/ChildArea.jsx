@@ -1,4 +1,4 @@
-import React from "react";
+import { memo } from "react";
 
 const style = {
   width: "100%",
@@ -6,7 +6,7 @@ const style = {
   backgroundColor: "khaki"
 };
 
-const ChildArea = (props) => {
+const ChildArea = memo((props) => {
   const { open } = props;
   console.log("ChildAreaコンポーネントがレンダリングされました！！");
 
@@ -24,6 +24,6 @@ const ChildArea = (props) => {
       ) : null}
     </>
   );
-};
+});
 
 export default ChildArea;
