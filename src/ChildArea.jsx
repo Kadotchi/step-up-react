@@ -1,3 +1,5 @@
+import React from "react";
+
 const style = {
   width: "100%",
   hight: "200px",
@@ -6,6 +8,13 @@ const style = {
 
 const ChildArea = (props) => {
   const { open } = props;
+  console.log("ChildAreaコンポーネントがレンダリングされました！！");
+
+  const data = [...Array(2000).keys()];
+  data.forEach(() => {
+    console.log("...");
+  });
+
   return (
     <>
       {open ? (
